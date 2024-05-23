@@ -11,7 +11,7 @@ It is not a silver bullet - there could be firewall or a network device somewher
 
 ## Configuration
 
-There is limited configuration available. At this moment it requires setting a value in local storage.
+There is limited configuration available. At this moment it requires setting a value in local storage. You would need to open the developer console and set the value from there.
 
 ### Log level
 
@@ -60,3 +60,5 @@ localStorage.setItem("WebSocketDefibrilator:ping_interval_in_seconds", 10);
 #### Possible values
 
 Any number. Default is `10`. Negative number or `0` effectively mean "do not wait between pings" but pings will still be not be sent faster than every 1 second.
+
+This is not and not meant to be pinpoint exact. The ping will wait *at least* that many seconds. But it might be more in tabs that are currently not in focus.
